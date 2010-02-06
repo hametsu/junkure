@@ -1,0 +1,4 @@
+twitter_auth.yml
+ca_twitter
+*.sqlite3
+schema.rb

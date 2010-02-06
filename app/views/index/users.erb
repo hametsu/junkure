@@ -1,0 +1,20 @@
+<h1>twitter oauth</h1>
+
+<% if current_user %>
+  <%= link_to image_tag(current_user.profile_image_url, :title => h(current_user.name), :size => "24x24"), "/#{current_user.login}" %>
+  <%=h current_user.login %>としてログイン中
+<% else %>
+  ログインしていません<br />
+  <a href="/session/new">
+    <img src="http://apiwiki.twitter.com/f/1242697715/Sign-in-with-Twitter-darker.png"
+         title="sign in with twitter" alt="sign in with twitter"/>
+  </a>
+<% end %>
+
+<hr />
+
+最近ログインしたユーザー<br />
+<% @users.each do |user| %>
+  <%= link_to image_tag(user.profile_image_url, :title => h(user.name), :size => "24x24"), "/#{user.login}" %>
+  <%= user.login %>
+<% end %>

@@ -1,0 +1,833 @@
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+
+
+Processing SessionsController#new (for 192.168.1.1 at 2010-02-07 04:15:05) [GET]
+Redirected to https://twitter.com/oauth/authenticate?oauth_token=k4bQsD6k6PR7W8BUxM3s2CqIjBD6V1zhpuZp35fDs&oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Foauth_callback
+Completed in 742ms (DB: 0) | 302 Found [http://yuiseki.net/session/new]
+
+
+Processing SessionsController#oauth_callback (for 192.168.1.1 at 2010-02-07 04:15:08) [GET]
+  Parameters: {"oauth_token"=>"k4bQsD6k6PR7W8BUxM3s2CqIjBD6V1zhpuZp35fDs", "oauth_verifier"=>"JiEpSr44GMzuW3D9SOi1gEXzd7vlT2hbMlcl7cQCw"}
+Redirected to http://yuiseki.net:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://yuiseki.net/oauth_callback?oauth_token=k4bQsD6k6PR7W8BUxM3s2CqIjBD6V1zhpuZp35fDs&oauth_verifier=JiEpSr44GMzuW3D9SOi1gEXzd7vlT2hbMlcl7cQCw]
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1751.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (209.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to TwitterAuthMigration (20100206190839)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "twitter_id" integer, "login" varchar(255), "access_token" varchar(255), "access_secret" varchar(255), "remember_token" varchar(255), "remember_token_expires_at" datetime, "utc_offset" integer, "time_zone" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100206190839')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+** TwitterAuth initialized properly.
+
+
+Processing SessionsController#new (for 192.168.1.1 at 2010-02-07 04:21:24) [GET]
+Redirected to https://twitter.com/oauth/authenticate?oauth_token=R33xshKCYEyg2YcWaVOcnsbaAo6UKXMXxpYmD4YR0&oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Foauth_callback
+Completed in 810ms (DB: 0) | 302 Found [http://yuiseki.net/session/new]
+
+
+Processing SessionsController#oauth_callback (for 192.168.1.1 at 2010-02-07 04:21:27) [GET]
+  Parameters: {"oauth_token"=>"R33xshKCYEyg2YcWaVOcnsbaAo6UKXMXxpYmD4YR0", "oauth_verifier"=>"CSdOxaBObzqNPELtstaNWKfoZqklnbEkFfnfip6zmw"}
+Redirected to http://yuiseki.net:3000/
+Completed in 9ms (DB: 0) | 302 Found [http://yuiseki.net/oauth_callback?oauth_token=R33xshKCYEyg2YcWaVOcnsbaAo6UKXMXxpYmD4YR0&oauth_verifier=CSdOxaBObzqNPELtstaNWKfoZqklnbEkFfnfip6zmw]
+** TwitterAuth initialized properly.
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:26:47) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 18ms (View: 5, DB: 0) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:29:29) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:29:37) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:29:56) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://yuiseki.net/]
+
+
+Processing SessionsController#new (for 192.168.1.1 at 2010-02-07 04:29:58) [GET]
+Redirected to https://twitter.com/oauth/authenticate?oauth_token=RnONOZURbxUGpijubd2O27tFVNaei066l0APUGtptg&oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Foauth_callback
+Completed in 656ms (DB: 0) | 302 Found [http://yuiseki.net/session/new]
+
+
+Processing SessionsController#oauth_callback (for 192.168.1.1 at 2010-02-07 04:30:09) [GET]
+  Parameters: {"oauth_token"=>"RnONOZURbxUGpijubd2O27tFVNaei066l0APUGtptg", "oauth_verifier"=>"W4hGMAlFi22deYDKA26DgG2WNhgYuGyRIEkgCua0Bz4"}
+Redirected to http://yuiseki.net:3000/
+Completed in 3ms (DB: 0) | 302 Found [http://yuiseki.net/oauth_callback?oauth_token=RnONOZURbxUGpijubd2O27tFVNaei066l0APUGtptg&oauth_verifier=W4hGMAlFi22deYDKA26DgG2WNhgYuGyRIEkgCua0Bz4]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:30:09) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:34:31) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://yuiseki.net/]
+** TwitterAuth initialized properly.
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:37:14) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 33ms (View: 9, DB: 0) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:37:31) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 25ms (View: 14, DB: 0) | 200 OK [http://yuiseki.net/]
+
+
+Processing SessionsController#oauth_callback (for 192.168.1.1 at 2010-02-07 04:41:36) [GET]
+
+OAuth::Unauthorized (401 Unauthorized):
+  oauth (0.3.6) lib/oauth/consumer.rb:200:in `token_request'
+  oauth (0.3.6) lib/oauth/tokens/request_token.rb:18:in `get_access_token'
+  vendor/plugins/twitter-auth/app/controllers/sessions_controller.rb:41:in `oauth_callback'
+
+Rendered rescues/_trace (226.9ms)
+Rendered rescues/_request_and_response (5.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:41:53) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 42ms (View: 23, DB: 0) | 200 OK [http://yuiseki.net/]
+
+
+Processing SessionsController#new (for 192.168.1.1 at 2010-02-07 04:41:55) [GET]
+Redirected to https://twitter.com/oauth/authenticate?oauth_token=WaR7WclcH2L8eHbvEtLl5drhv9EFcEBMjGlxavWQsZ4&oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Foauth_callback
+Completed in 737ms (DB: 0) | 302 Found [http://yuiseki.net/session/new]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:42:49) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 14ms (View: 1, DB: 0) | 200 OK [http://yuiseki.net/]
+
+
+Processing SessionsController#new (for 192.168.1.1 at 2010-02-07 04:42:51) [GET]
+Redirected to https://twitter.com/oauth/authenticate?oauth_token=NhOL2o4nN0ySkFjJ2mi8SK9B9U5msot0VvUZmHze5w&oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Foauth_callback
+Completed in 758ms (DB: 0) | 302 Found [http://yuiseki.net/session/new]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:43:31) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://yuiseki.net/]
+** TwitterAuth initialized properly.
+
+
+Processing SessionsController#new (for 192.168.1.1 at 2010-02-07 04:44:14) [GET]
+Redirected to https://twitter.com/oauth/authenticate?oauth_token=boejZDgYKsmTZ4Tqz1EcpMgv4GrbN7T6vK5HPQ0pbXk&oauth_callback=http%3A%2F%2Fyuiseki.net%3A3000%2Foauth_callback
+Completed in 715ms (DB: 0) | 302 Found [http://yuiseki.net/session/new]
+
+
+Processing SessionsController#new (for 192.168.1.1 at 2010-02-07 04:44:38) [GET]
+Redirected to https://twitter.com/oauth/authenticate?oauth_token=HCCutUUoyYtg6OAEe7Mxo5jaAhVqK474QwX1H3dgns&oauth_callback=http%3A%2F%2Fyuiseki.net%3A3000%2Foauth_callback
+Completed in 688ms (DB: 0) | 302 Found [http://yuiseki.net/session/new]
+
+
+Processing SessionsController#oauth_callback (for 192.168.1.1 at 2010-02-07 04:45:06) [GET]
+  Parameters: {"oauth_token"=>"HCCutUUoyYtg6OAEe7Mxo5jaAhVqK474QwX1H3dgns", "oauth_verifier"=>"5KYOXvBUY5ZFRoEH8bueR0z3QeLxECqZ44qqoh24"}
+Redirected to http://yuiseki.net:3000/
+Completed in 9ms (DB: 0) | 302 Found [http://yuiseki.net/oauth_callback?oauth_token=HCCutUUoyYtg6OAEe7Mxo5jaAhVqK474QwX1H3dgns&oauth_verifier=5KYOXvBUY5ZFRoEH8bueR0z3QeLxECqZ44qqoh24]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:45:06) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 20ms (View: 6, DB: 0) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:45:41) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://yuiseki.net/]
+
+
+Processing SessionsController#new (for 192.168.1.1 at 2010-02-07 04:45:48) [GET]
+Redirected to https://twitter.com/oauth/authenticate?oauth_token=U1Pel2tUQI6oNRryZf5JXY0fpOXjgzNrX6tprems&oauth_callback=http%3A%2F%2Fyuiseki.net%3A3000%2Foauth_callback
+Completed in 974ms (DB: 0) | 302 Found [http://yuiseki.net/session/new]
+
+
+Processing SessionsController#oauth_callback (for 192.168.1.1 at 2010-02-07 04:45:58) [GET]
+  Parameters: {"oauth_token"=>"U1Pel2tUQI6oNRryZf5JXY0fpOXjgzNrX6tprems", "oauth_verifier"=>"2mrDwqfYD1dC7Uv8BjBPP3DPMacOrQzDWpVrbMulDM"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."twitter_id" = 2158391) LIMIT 1[0m
+  [4;35;1mTwitterAuth::GenericUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'yuiseki') LIMIT 1[0m
+  [4;36;1mTwitterAuth::GenericUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."twitter_id" = 2158391) LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("created_at", "access_secret", "remember_token_expires_at", "updated_at", "utc_offset", "twitter_id", "remember_token", "time_zone", "login", "access_token") VALUES('2010-02-06 19:45:59', 'pYkPm3e9fAiu4q6Q4Zt8J8Z3VGriytwzuPzbCKntg', NULL, '2010-02-06 19:45:59', 32400, 2158391, NULL, 'Tokyo', 'yuiseki', '2158391-0pzDn8vdIpi2ecWCdxNhUZsOEdM0HGzbMIZ6AoJHE')[0m
+  [4;36;1mTwitterAuth::GenericUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'yuiseki' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mTwitterAuth::GenericUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."twitter_id" = 2158391 AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mTwitterAuth::GenericUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."remember_token" = '5be409d20c5ffe246441' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-06 19:46:00', "remember_token" = '5be409d20c5ffe246441', "remember_token_expires_at" = '2010-02-20 19:46:00' WHERE "id" = 1[0m
+Redirected to http://yuiseki.net:3000/
+Completed in 2160ms (DB: 2) | 302 Found [http://yuiseki.net/oauth_callback?oauth_token=U1Pel2tUQI6oNRryZf5JXY0fpOXjgzNrX6tprems&oauth_verifier=2mrDwqfYD1dC7Uv8BjBPP3DPMacOrQzDWpVrbMulDM]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:46:00) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:46:21) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:46:34) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 18ms (View: 8, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:47:21) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 18ms (View: 9, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:47:50) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 42ms (View: 21, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:48:06) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 34ms (View: 25, DB: 1) | 200 OK [http://yuiseki.net/]
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to TwitterAuthMigration (20100206190839)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100206190839'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to TwitterAuthMigration (20100206190839)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "twitter_id" integer, "login" varchar(255), "access_token" varchar(255), "access_secret" varchar(255), "remember_token" varchar(255), "remember_token_expires_at" datetime, "name" varchar(255), "location" varchar(255), "description" varchar(255), "profile_image_url" varchar(255), "url" varchar(255), "protected" boolean, "profile_background_image_url" varchar(255), "profile_background_tile" boolean, "friends_count" integer, "statuses_count" integer, "followers_count" integer, "favourites_count" integer, "utc_offset" integer, "time_zone" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100206190839')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+** TwitterAuth initialized properly.
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:51:19) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 44ms (View: 29, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing SessionsController#new (for 192.168.1.1 at 2010-02-07 04:51:23) [GET]
+Redirected to https://twitter.com/oauth/authenticate?oauth_token=z9iY0Fy0v768nQ6zZ0kqMfG5Dxf73tXq1EhrnvPqpE&oauth_callback=http%3A%2F%2Fyuiseki.net%3A3000%2Foauth_callback
+Completed in 752ms (DB: 0) | 302 Found [http://yuiseki.net/session/new]
+
+
+Processing SessionsController#oauth_callback (for 192.168.1.1 at 2010-02-07 04:51:24) [GET]
+  Parameters: {"oauth_token"=>"z9iY0Fy0v768nQ6zZ0kqMfG5Dxf73tXq1EhrnvPqpE", "oauth_verifier"=>"9NzfW6NahTJLJwXfgqeu5P2PbHEOFFjaEOW9DgK3eJI"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."twitter_id" = 2158391) LIMIT 1[0m
+  [4;35;1mTwitterAuth::GenericUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'yuiseki') LIMIT 1[0m
+  [4;36;1mTwitterAuth::GenericUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."twitter_id" = 2158391) LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "profile_background_tile", "location", "profile_image_url", "created_at", "access_secret", "remember_token_expires_at", "updated_at", "url", "favourites_count", "utc_offset", "twitter_id", "remember_token", "protected", "followers_count", "description", "time_zone", "login", "profile_background_image_url", "friends_count", "statuses_count", "access_token") VALUES('yuiseki', 't', 'Akihabara, Tokyo, Japan', 'http://a1.twimg.com/profile_images/29619832/http___moe2homelinuxnet_src_200508_200_normal.jpg', '2010-02-06 19:51:26', 'pYkPm3e9fAiu4q6Q4Zt8J8Z3VGriytwzuPzbCKntg', NULL, '2010-02-06 19:51:26', 'http://www.flickr.com/photos/yuiseki/', 85321, 32400, 2158391, NULL, 'f', 6534, '路上であそびまくり / streetcomputing / yuiseki at softbank.ne.jp / 09061915325 / skype_id yuiseki / keio sfc ylab / cerevo inc', 'Tokyo', 'yuiseki', 'http://a1.twimg.com/profile_background_images/72338626/4329003745_18a82aa201.jpg', 7176, 64359, '2158391-0pzDn8vdIpi2ecWCdxNhUZsOEdM0HGzbMIZ6AoJHE')[0m
+  [4;36;1mTwitterAuth::GenericUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'yuiseki' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mTwitterAuth::GenericUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."twitter_id" = 2158391 AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mTwitterAuth::GenericUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."remember_token" = '4df431917e33e72de98a' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-06 19:51:26', "remember_token" = '4df431917e33e72de98a', "remember_token_expires_at" = '2010-02-20 19:51:26' WHERE "id" = 1[0m
+Redirected to http://yuiseki.net:3000/
+Completed in 2071ms (DB: 2) | 302 Found [http://yuiseki.net/oauth_callback?oauth_token=z9iY0Fy0v768nQ6zZ0kqMfG5Dxf73tXq1EhrnvPqpE&oauth_verifier=9NzfW6NahTJLJwXfgqeu5P2PbHEOFFjaEOW9DgK3eJI]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:51:26) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 19ms (View: 7, DB: 2) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:51:46) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 29ms (View: 5, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:53:33) [GET]
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 22ms (View: 11, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:54:40) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 23ms (View: 11, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:54:51) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 22ms (View: 11, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:55:53) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 23ms (View: 12, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:56:06) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 43ms (View: 23, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:56:33) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 23ms (View: 12, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:56:34) [GET]
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 99ms (View: 6, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:57:03) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:57:25) [GET]
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 23ms (View: 12, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:58:10) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 24ms (View: 13, DB: 2) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:58:32) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 24ms (View: 12, DB: 2) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:59:13) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 25ms (View: 13, DB: 2) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 04:59:34) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 25ms (View: 13, DB: 2) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:00:46) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+
+ActionView::TemplateError (undefined method `profile_image_url' for false:FalseClass) on line #9 of app/views/index/users.erb:
+6: </a>
+7: <hr />
+8: 
+9: <%= link_to image_tag(current_user.profile_image_url, :title => h(current_user.name), :size => "24x24"), "http://twitter.com/#{current_user.login}" %>
+10: <%=h current_user.login %>としてログイン中
+11: 
+12: <hr />
+
+    app/views/index/users.erb:9
+
+Rendered rescues/_trace (164.4ms)
+Rendered rescues/_request_and_response (8.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:00:52) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering index/users
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 61ms (View: 29, DB: 2) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:01:32) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering index/users
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 25ms (View: 13, DB: 2) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:01:35) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:02:04) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 111ms (View: 99, DB: 2) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:02:08) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 27ms (View: 14, DB: 2) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:02:12) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 26ms (View: 14, DB: 2) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:03:19) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 22ms (View: 11, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:03:39) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering index/users
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 25ms (View: 14, DB: 2) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:03:41) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering index/users
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:04:29) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/index_controller.rb:3:in `users'
+
+Rendered rescues/_trace (128.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:04:47) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" ORDER BY created_at DESC[0m
+Rendering index/users
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 27ms (View: 15, DB: 2) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:04:49) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" ORDER BY created_at DESC[0m
+Rendering index/users
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://yuiseki.net/]
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:11:19) [GET]
+  Parameters: {"login"=>"yuiseki"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'yuiseki') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template index/show.erb in view path app/views:vendor/plugins/twitter-auth/app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:12:00) [GET]
+  Parameters: {"login"=>"hoge"}
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'yuiseki') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template index/show.erb in view path app/views:vendor/plugins/twitter-auth/app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:12:52) [GET]
+  Parameters: {"login"=>"hoge"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'yuiseki') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template index/show.erb in view path app/views:vendor/plugins/twitter-auth/app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:13:14) [GET]
+  Parameters: {"login"=>"hoge"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'yuiseki') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template index/show.erb in view path app/views:vendor/plugins/twitter-auth/app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:13:42) [GET]
+  Parameters: {"login"=>"hoge"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = '--- :login
+') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template index/show.erb in view path app/views:vendor/plugins/twitter-auth/app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:14:11) [GET]
+  Parameters: {"login"=>"hoge"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/index_controller.rb:3:in `show'
+
+Rendered rescues/_trace (40.6ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:14:47) [GET]
+  Parameters: {"login"=>"hoge"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/index_controller.rb:3:in `show'
+
+Rendered rescues/_trace (114.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:15:34) [GET]
+  Parameters: {"login"=>"hoge"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/index_controller.rb:3:in `show'
+
+Rendered rescues/_trace (40.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:15:47) [GET]
+  Parameters: {"login"=>"yuiseki"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/index_controller.rb:3:in `show'
+
+Rendered rescues/_trace (38.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:17:31) [GET]
+  Parameters: {"login"=>"yuiseki"}
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'yuiseki') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template index/show.erb in view path app/views:vendor/plugins/twitter-auth/app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:17:36) [GET]
+  Parameters: {"login"=>"hoge"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'hoge') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template index/show.erb in view path app/views:vendor/plugins/twitter-auth/app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#show (for 192.168.1.1 at 2010-02-07 05:19:10) [GET]
+  Parameters: {"login"=>"hoge"}
+
+SyntaxError (/home/yuiseki/rails/twitter/app/controllers/index_controller.rb:13: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#show (for 192.168.1.1 at 2010-02-07 05:19:38) [GET]
+  Parameters: {"login"=>"hoge"}
+
+SyntaxError (/home/yuiseki/rails/twitter/app/controllers/index_controller.rb:13: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#show (for 192.168.1.1 at 2010-02-07 05:19:51) [GET]
+  Parameters: {"login"=>"hoge"}
+
+SyntaxError (/home/yuiseki/rails/twitter/app/controllers/index_controller.rb:13: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered rescues/_trace (36.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#show (for 192.168.1.1 at 2010-02-07 05:19:58) [GET]
+  Parameters: {"login"=>"hoge"}
+
+SyntaxError (/home/yuiseki/rails/twitter/app/controllers/index_controller.rb:13: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered rescues/_trace (39.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+** TwitterAuth initialized properly.
+
+
+Processing ApplicationController#show (for 192.168.1.1 at 2010-02-07 05:20:14) [GET]
+  Parameters: {"login"=>"hoge"}
+
+SyntaxError (/home/yuiseki/rails/twitter/app/controllers/index_controller.rb:13: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:20:35) [GET]
+  Parameters: {"login"=>"hoge"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'hoge') LIMIT 1[0m
+Rendering public/404.html (404 Not Found)
+Completed in 27ms (View: 3, DB: 0) | 404 Not Found [http://yuiseki.net/hoge]
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:20:40) [GET]
+  Parameters: {"login"=>"yuiseki"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'yuiseki') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template index/show.erb in view path app/views:vendor/plugins/twitter-auth/app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:23:04) [GET]
+  Parameters: {"login"=>"yuiseki"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'yuiseki') LIMIT 1[0m
+Rendering index/show
+Completed in 19ms (View: 7, DB: 1) | 200 OK [http://yuiseki.net/yuiseki]
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:23:52) [GET]
+  Parameters: {"login"=>"yuiseki"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'yuiseki') LIMIT 1[0m
+Rendering index/show
+Completed in 38ms (View: 26, DB: 1) | 200 OK [http://yuiseki.net/yuiseki]
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:24:39) [GET]
+  Parameters: {"login"=>"yuiseki"}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'yuiseki') LIMIT 1[0m
+Rendering index/show
+Completed in 41ms (View: 17, DB: 1) | 200 OK [http://yuiseki.net/yuiseki]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:24:45) [GET]
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" ORDER BY created_at DESC[0m
+Rendering index/users
+Completed in 23ms (View: 12, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:24:49) [GET]
+  Parameters: {"login"=>"yuiseki"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'yuiseki') LIMIT 1[0m
+Rendering index/show
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://yuiseki.net/yuiseki]
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:25:46) [GET]
+  Parameters: {"login"=>"yuiseki"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'yuiseki') LIMIT 1[0m
+Rendering index/show
+Completed in 23ms (View: 11, DB: 1) | 200 OK [http://yuiseki.net/yuiseki]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:25:50) [GET]
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" ORDER BY created_at DESC[0m
+Rendering index/users
+Completed in 24ms (View: 12, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:25:56) [GET]
+  Parameters: {"login"=>"yuiseki"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'yuiseki') LIMIT 1[0m
+Rendering index/show
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://yuiseki.net/yuiseki]
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:26:16) [GET]
+  Parameters: {"login"=>"yuiseki"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'yuiseki') LIMIT 1[0m
+Rendering index/show
+Completed in 23ms (View: 11, DB: 1) | 200 OK [http://yuiseki.net/yuiseki]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:26:20) [GET]
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" ORDER BY created_at DESC[0m
+Rendering index/users
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:26:21) [GET]
+  Parameters: {"login"=>"yuiseki"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'yuiseki') LIMIT 1[0m
+Rendering index/show
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://yuiseki.net/yuiseki]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:26:23) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" ORDER BY created_at DESC[0m
+Rendering index/users
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:26:27) [GET]
+  Parameters: {"login"=>"yuiseki"}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'yuiseki') LIMIT 1[0m
+Rendering index/show
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://yuiseki.net/yuiseki]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:26:29) [GET]
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" ORDER BY created_at DESC[0m
+Rendering index/users
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://yuiseki.net/]
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:29:17) [GET]
+  Parameters: {"login"=>"yuiseki"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'yuiseki') LIMIT 1[0m
+Rendering index/show
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://yuiseki.net/yuiseki]
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:29:19) [GET]
+  Parameters: {"login"=>"yuiseki"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'yuiseki') LIMIT 1[0m
+Rendering index/show
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://yuiseki.net/yuiseki]
+
+
+Processing IndexController#show (for 192.168.1.1 at 2010-02-07 05:29:20) [GET]
+  Parameters: {"login"=>"yuiseki"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'yuiseki') LIMIT 1[0m
+Rendering index/show
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://yuiseki.net/yuiseki]
+
+
+Processing IndexController#users (for 192.168.1.1 at 2010-02-07 05:29:22) [GET]
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" ORDER BY created_at DESC[0m
+Rendering index/users
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://yuiseki.net/]
