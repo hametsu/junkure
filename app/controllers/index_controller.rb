@@ -24,6 +24,16 @@ class IndexController < ApplicationController
     redirect_to :action => :top
   end
 
+  def admin_json
+    if check_admin(current_user.login)
+      render :json=> {
+        :records => User.find(:all, :order => "updated_at DESC",  :conditions => ["address is NOT NULL", ])
+      }
+    else
+      render :file=> "public/404.html", :status=>'404 Not Found'
+    end
+  end
+
   private
   def check_admin(login_name)
     return ['lie_', 'tetsuomi', 'kaichoo', 'yuiseki', 'itkz', 'itoyanagi', 'hagino3000'].include?(login_name)
