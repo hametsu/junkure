@@ -1,5 +1,9 @@
 <h1>junk kure管理者ビュー</h1>
 
+<div id="gmap"></div>
+<div id="errors"></div>
+
+
 <br class="clear" />
 <% @users.each do |user| %>
   <div><%= link_to image_tag(user.profile_image_url, :title => h(user.name), :size => "24x24"), "http://twitter.com/#{user.login}" %><%= user.login %></div>
@@ -8,4 +12,9 @@
   <pre><%= user.junk %><pre>
 <hr />
 <% end %>
+
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAy7h9OzH1HlLorlS5-QQu5hQ16-vWgp5fCs8Ohf2LwUFZ-R9PxRRchvcBo5Ew3vyfojD5f9piVXU-9g&amp;sensor=false"
+            type="text/javascript"></script>
+
+<%= javascript_include_tag "rootmapping" %>
 
