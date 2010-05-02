@@ -50,4 +50,6 @@ class IndexController < ApplicationController
   def check_admin(login_name)
     return ['lie_', 'tetsuomi', 'kaichoo', 'yuiseki', 'itkz', 'itoyanagi', 'hagino3000', 'ssig33', 'takano32'].include?(login_name)
   end
+  def find_by_way(:name)
+  end
 end
