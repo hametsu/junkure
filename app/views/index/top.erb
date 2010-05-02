@@ -32,8 +32,8 @@
   <% if current_user.junk == "" or current_user.junk.blank? or @change %>
     <p>情報を登録をしてください（<b>すべて非公開です</b>）：</p>
     <% form_for :user, current_user, :url => {:action => 'update'} do |f| %>
-      <p><label for="user_junk">連絡用電話番号</label>：<%= f.text_field 'tel' %></p>
-      <p><label for="user_junk">回収に伺う際の住所</label>：<%= f.text_field 'address', :size => "70" %><br />（自力搬送、郵送の場合は空欄）</p>
+      <p><label for="user_tel">連絡用電話番号</label>：<%= f.text_field 'tel' %></p>
+      <p><label for="user_address">回収に伺う際の住所</label>：<%= f.text_field 'address', :size => "70" %><br />（自力搬送、郵送の場合は空欄）</p>
       <p><label for="user_junk">ジャンクの台数、状態など</label>：<%= f.text_area 'junk', :size => "50x4" %><br />（約500文字を超えるとカットされます）</p>
       <%= submit_tag "登録" %>
     <% end %>

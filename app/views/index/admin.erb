@@ -1,7 +1,11 @@
 <h1>junk kure管理者ビュー</h1>
 
+<!--
 <div id="gmap"></div>
 <div id="errors"></div>
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAy7h9OzH1HlLorlS5-QQu5hRjYVmrf2CTeDIi3Et9vpJSvQLYAxR5OeDLXU_QZBmSrLLi5GZs-iDBBA&amp;sensor=false" type="text/javascript"></script>
+<%= javascript_include_tag "rootmapping" %>
+-->
 
 
 <br class="clear" />
@@ -9,12 +13,22 @@
   <div><%= link_to image_tag(user.profile_image_url, :title => h(user.name), :size => "24x24"), "http://twitter.com/#{user.login}" %><%= user.login %></div>
   <div><%= user.tel %></div>
   <div><%= user.address %></div>
-  <pre><%= user.junk %><pre>
+  <div><%= user.junk %></div>
+  <br />
+  ユーザー情報編集
+  <% form_for :user, user, :url => {:action => 'update'} do |f| %>
+    <%= f.hidden_field 'id' %>
+    <p><label for="user_delivery_id">輸送手段</label>：
+        <%= radio_button_tag 'user_delivery_id', '0' %>郵送
+        <%= radio_button_tag 'user_delivery_id', '1' %>自力
+        <%= radio_button_tag 'user_delivery_id', '2' %>赤帽
+        <%= radio_button_tag 'user_delivery_id', '3' %>糸柳
+    </p>
+    <p><label for="user_amount">台数</label>：<%= f.text_field 'amount' %></p>
+    <%= submit_tag "登録" %>
+  <% end %>
 <hr />
 <% end %>
 
-<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAy7h9OzH1HlLorlS5-QQu5hRjYVmrf2CTeDIi3Et9vpJSvQLYAxR5OeDLXU_QZBmSrLLi5GZs-iDBBA&amp;sensor=false"
-            type="text/javascript"></script>
 
-<%= javascript_include_tag "rootmapping" %>
 
