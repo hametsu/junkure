@@ -1,7 +1,14 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
+  name: '郵送'
 
 two:
-  name: MyString
+  name: '自力'
+
+three:
+  name: '赤帽'
+
+four:
+  name: '糸柳'
+
