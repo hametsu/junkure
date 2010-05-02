@@ -20,6 +20,7 @@ class IndexController < ApplicationController
   end
 
   def find_by_way
+    check_admin_without_render(current_user)
     delivery = Delivery.find_by_name(params[:name])
     @users = User.find(:all, :order => "created_at DESC", :conditions => ["delivery_id = ?", delivery.id])
   end
@@ -55,5 +56,14 @@ class IndexController < ApplicationController
   private
   def check_admin(login_name)
     return ['lie_', 'tetsuomi', 'kaichoo', 'yuiseki', 'itkz', 'itoyanagi', 'hagino3000', 'ssig33', 'takano32'].include?(login_name)
+  end
+  def check_admin_without_render(current_user)
+    if current_user
+      unless check_admin(current_user.login)
+        redirect_to '/'
+      end
+    else
+      redirect_to '/login'
+    end
   end
 end
