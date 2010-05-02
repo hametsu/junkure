@@ -20,7 +20,7 @@
     <%= f.hidden_field 'id' %>
     <p><label for="user_delivery_id">輸送手段</label>：
     <% Delivery.all.each do |way| %>
-      <%= radio_button_tag 'user_delivery_id', way.id , user.delivery_id == way.id %>way.name
+      <%= radio_button_tag 'user[delivery_id]', way.id, user.delivery_id == way.id %><%= way.name %>
     <% end %>
     </p>
     <p><label for="user_amount">台数</label>：<%= f.text_field 'amount' %></p>

@@ -24,7 +24,7 @@ class IndexController < ApplicationController
     if check_admin(current_user.login) and user[:id]
       @user = User.find_by_id(user[:id])
       @user.amount = user[:amount]
-      @user.delivery_id = user[:delivery_id]
+      @user.delivery = Delivery.find_by_id(user[:delivery_id])
       @user.save!
       redirect_to '/admin'
     else
