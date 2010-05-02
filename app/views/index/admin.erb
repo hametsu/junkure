@@ -19,10 +19,9 @@
   <% form_for :user, user, :url => {:action => 'update'} do |f| %>
     <%= f.hidden_field 'id' %>
     <p><label for="user_delivery_id">輸送手段</label>：
-        <%= radio_button_tag 'user_delivery_id', '0' %>郵送
-        <%= radio_button_tag 'user_delivery_id', '1' %>自力
-        <%= radio_button_tag 'user_delivery_id', '2' %>赤帽
-        <%= radio_button_tag 'user_delivery_id', '3' %>糸柳
+    <% Delivery.all.each do |way| %>
+      <%= radio_button_tag 'user_delivery_id', way.id , user.delivery_id == way.id %>way.name
+    <% end %>
     </p>
     <p><label for="user_amount">台数</label>：<%= f.text_field 'amount' %></p>
     <%= submit_tag "登録" %>
