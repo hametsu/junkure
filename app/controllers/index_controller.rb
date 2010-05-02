@@ -1,22 +1,16 @@
 class IndexController < ApplicationController
   layout "index"
 
-  def admin
-    if current_user
-      if check_admin(current_user.login)
-        @users = User.find(:all, :order => "updated_at", :conditions => ["junk is NOT NULL", ])
-      else
-        redirect_to '/'
-      end
-    else
-      redirect_to '/login'
-    end
-  end
-
   def top
     @users = User.find(:all, :order => "created_at DESC", :conditions => ["junk is NOT NULL", ])
     @change = false
     @change = true if params.key?(:change)
+  end
+
+  # only allow for admins
+  def admin
+    check_admin_without_render(current_user)
+    @users = User.find(:all, :order => "updated_at", :conditions => ["junk is NOT NULL", ])
   end
 
   def find_by_way
@@ -43,13 +37,10 @@ class IndexController < ApplicationController
   end
 
   def admin_json
-    if check_admin(current_user.login)
-      render :json=> {
-        :records => User.find(:all, :order => "updated_at DESC",  :conditions => ["address is NOT NULL", ])
-      }
-    else
-      redirect_to '/login'
-    end
+    check_admin_without_render(current_user)
+    render :json=> {
+      :records => User.find(:all, :order => "updated_at DESC",  :conditions => ["address is NOT NULL", ])
+    }
   end
 
 
@@ -57,6 +48,7 @@ class IndexController < ApplicationController
   def check_admin(login_name)
     return ['lie_', 'tetsuomi', 'kaichoo', 'yuiseki', 'itkz', 'itoyanagi', 'hagino3000', 'ssig33', 'takano32'].include?(login_name)
   end
+
   def check_admin_without_render(current_user)
     if current_user
       unless check_admin(current_user.login)

@@ -1,4 +1,5 @@
 
 <% @users.each do |user| %>
+  <div><%= link_to image_tag(user.profile_image_url, :title => h(user.name), :size => "24x24"), "http://twitter.com/#{user.login}" %><%= user.login %></div>
   <%= user.address %><br />
 <% end %>

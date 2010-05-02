@@ -7,7 +7,11 @@
 <%= javascript_include_tag "rootmapping" %>
 -->
 
+<% Delivery.all.each do |way| %>
+  <a href="/way/<%= way.name %>"><%= way.name %></a>
+<% end %>
 
+<br />
 <br class="clear" />
 <% @users.each do |user| %>
   <div><%= link_to image_tag(user.profile_image_url, :title => h(user.name), :size => "24x24"), "http://twitter.com/#{user.login}" %><%= user.login %></div>
