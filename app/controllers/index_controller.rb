@@ -19,6 +19,11 @@ class IndexController < ApplicationController
     @change = true if params.key?(:change)
   end
 
+  def find_by_way
+    delivery = Delivery.find_by_name(params[:name])
+    @users = User.find(:all, :order => "created_at DESC", :conditions => ["delivery_id = ?", delivery.id])
+  end
+
   def update
     user = params[:user]
     if check_admin(current_user.login) and user[:id]
@@ -46,10 +51,9 @@ class IndexController < ApplicationController
     end
   end
 
+
   private
   def check_admin(login_name)
     return ['lie_', 'tetsuomi', 'kaichoo', 'yuiseki', 'itkz', 'itoyanagi', 'hagino3000', 'ssig33', 'takano32'].include?(login_name)
-  end
-  def find_by_way(:name)
   end
 end
